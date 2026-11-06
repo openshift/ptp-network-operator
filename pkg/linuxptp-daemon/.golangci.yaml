@@ -4,7 +4,7 @@ run:
   issues-exit-code: 1
   tests: true
 issues:
-  new-from-rev: c7189faf231efff709e18047f4aaa092ed8df33c
+  new-from-rev: f6c110d62175b2176745ee51b9e8e0099e8f6ca0
 linters:
   settings:
     govet:
@@ -39,6 +39,10 @@ linters:
   exclusions:
     generated: lax
     rules:
+      - path: _test\.go
+        linters:
+          - revive
+        text: dot-imports
       - path: (.+)\.go$
         text: "ST1000: at least one file in a package should have a package comment"
       - path: (.+)\.go$

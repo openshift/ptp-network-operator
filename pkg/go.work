@@ -1,0 +1,10 @@
+go 1.24.0
+
+use (
+	..
+	./linuxptp-daemon
+	./cloud-event-proxy
+)
+
+replace google.golang.org/genproto v0.0.0-20190819201941-24fa4b261c55 => google.golang.org/genproto v0.0.0-20261026165753-2ffab32bce7e
+replace golang.org/x/net => github.com/openshift-sustaining/net v0.50.0-sec.4
